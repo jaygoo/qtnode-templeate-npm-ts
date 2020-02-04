@@ -1,0 +1,109 @@
+parser: "@typescript-eslint/parser"
+
+plugins:
+  - "typescript"
+  - "@typescript-eslint"
+
+env:
+  es6: true
+  browser: true
+  commonjs: true
+  node: true
+
+extends:
+    - "plugin:@typescript-eslint/recommended"
+    - "prettier/@typescript-eslint"
+    - "plugin:prettier/recommended"
+    - 'eslint:recommended'
+
+
+parserOptions:
+  ecmaVersion: 6
+  sourceType": module
+  ecmaFeatures:
+    modules: true
+    experimentalObjectRestSpread: true
+
+rules:
+
+  prettier/prettier:
+    - 0
+  eqeqeq: ['warn', 'always']
+  prefer-const: ['error', {"destructuring": "all", "ignoreReadBeforeAssign": true}]
+  '@typescript-eslint/indent': ['error', 4, { VariableDeclarator: 4, SwitchCase: 1 }]
+  '@typescript-eslint/no-unused-vars': 0
+  "@typescript-eslint/interface-name-prefix": 0
+  "@typescript-eslint/explicit-member-accessibility": 0
+  "@typescript-eslint/no-triple-slash-reference": 0
+  "@typescript-eslint/ban-ts-ignore": 0
+  "@typescript-eslint/no-this-alias": 0
+  "@typescript-eslint/triple-slash-reference": ['error', { "path": "always", "types": "never", "lib": "never" }]
+
+  strict:
+    - 0
+
+  quotes:
+    - 2
+    - single
+  linebreak-style:
+    - 1
+    - unix
+  semi:
+    - 2
+    - always
+  no-multi-spaces:
+    - 2
+  no-self-compare:
+    - 2
+  max-depth:
+    - 2
+    - 4
+  max-nested-callbacks:
+    - 2
+    - 4
+  max-params:
+    - 2
+    - 4
+  max-statements:
+    - 2
+    - 25
+  max-statements-per-line:
+    - 2
+  max-len:
+    - 2
+    - 120
+  multiline-ternary:
+    - 0
+  callback-return:
+    - 2
+  handle-callback-err:
+    - 2
+  array-bracket-spacing:
+    - 2
+  no-const-assign:
+    - 2
+  no-return-assign:
+    - 0
+  no-inner-declarations:
+    - 2
+  no-var:
+    - 2
+  no-console:
+    - 1
+  no-lonely-if:
+    - 2
+  require-jsdoc:
+    - 0
+    - require:
+        FunctionDeclaration: true
+        MethodDefinition: true
+        ClassDeclaration: true
+  valid-jsdoc:
+    - 2
+  comma-dangle:
+    - 2
+    - never
+  no-undef:
+    - 2
+  no-extra-boolean-cast:
+    - 1
